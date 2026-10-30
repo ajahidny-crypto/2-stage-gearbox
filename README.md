@@ -2,17 +2,31 @@
 
 My first mechanism project: a small 2-stage gearbox designed in Fusion 360 for printing on a Bambu Lab P1S. A DC motor spins a small gear, and two gear stages slow it down 16:1, trading speed for torque. I'm a beginner, so this is mostly a log of what I tried and what I learned.
 
+![Gear train inside the housing, top view](gear-train-top.png)
+
 ## How it works
 
 The motor turns a small gear. That gear drives a big gear, which sits on the same shaft as a second small gear. The second small gear drives a big gear on the output shaft. Each pair is 4:1, so two pairs give 16:1.
 
 Gears sharing a shaft turn at the same speed, which is how the reduction stacks across stages.
 
+![The four gears](gear-train-iso.png)
+
+![Side view showing the two gear heights](gear-side-view.png)
+
 ## The design
 
 - 4 gears with the same tooth size (module 1.5): two with 15 teeth and two with 60
 - A housing built around the gear layout
 - A small 130-size DC motor and 2 mm rod for the shafts
+
+![The housing](housing.png)
+
+![The back plate with the shaft holes](housing-back-plate.png)
+
+I drew the case outline in a sketch with 2.5 mm of clearance around the gear tips, then extruded it.
+
+![Clearance sketch around the gears](clearance-sketch.png)
 
 ## What I learned
 
@@ -32,13 +46,12 @@ My first trophy print also came out as strings and slid off the bed. After I was
 
 ## Files
 
-- `gearbox.f3d`: Fusion 360 file
-- `/stl`: printable gears and housing
-- `/images`: screenshots and photos
+- `2 Stage Gear Box.stl`: STL export of the gearbox
+- The `.png` files: screenshots from Fusion, shown above
 
 ## Next time
 
-I'd pick the output speed and overall size first, then work out the gears. I'd check units before generating anything and test one stage on its own before building the whole thing.
+Next time I'd pick the output speed and overall size first, then work out the gears. I'd also check units before generating anything, and test one stage by itself before building the whole thing.
 
 ## Tools
 
